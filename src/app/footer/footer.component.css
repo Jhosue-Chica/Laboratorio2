@@ -1,0 +1,78 @@
+.footer {
+    display: block;
+    background-color: #294145;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-footer {
+    flex: 1;
+    margin-left: -500px; 
+    margin-right: 50px; 
+    text-align: right;
+
+  }
+  
+  .logo-footer img {
+    width: 200px;
+    height: 90px;
+  }
+  
+  .frase {
+    flex: 1;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-right: 100px;
+  }
+  
+  .relleno_footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .relleno_footer ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .relleno_footer li {
+    margin: 5px 0;
+  }
+  
+  .relleno_footer .fas {
+    margin-right: 8px;
+  }
+  .redes_sociales{
+    margin-left: 200px;
+    width: 500px;
+  }
+  
+  .redes_sociales img {
+    width: 30px; /* Ajusta el tamaño de los íconos de redes sociales según sea necesario */
+    margin-right: 10px;
+  }
+  .contactos{
+    width: 500px;
+  }
+  .servicios{
+    width: 500px;
+  }
+  
+  .derechos-reservados {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid #ffffff;
+    padding-top: 10px;
+  }
+  
