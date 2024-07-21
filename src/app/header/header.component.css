@@ -1,0 +1,51 @@
+header {
+  background-color: #6EA343;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  height: 75px; 
+  width: 200px;
+  margin-left: 100px;
+}
+
+.menu {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.social-media {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+
+}
+
+.social-media a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  
+}
+.social-media img {
+  height: 30px;
+  width: 30px;
+
+}
