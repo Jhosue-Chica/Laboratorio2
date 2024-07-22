@@ -20,3 +20,29 @@
 .plant-card button {
     margin: 4px;
 }
+
+.btnDetails{
+    background-color: #6EA343;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 24px;
+}
+
+.btnDetails:hover {
+    color: white;
+    background-color: #549420;
+}
+
+.btnAddToCart{
+    background-color: #ffc800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 24px;
+}
+
+.btnAddToCart:hover {
+    color: white;
+    background-color: #d9aa00;
+}
