@@ -1,1 +1,7 @@
-<p>Un componente que se encarga de mostrar información detallada de una planta seleccionada</p>
+<div class="plant-detail" *ngIf="plant">
+    <img [src]="plant.image" alt="{{ plant.name }}">
+    <h2>{{ plant.name }}</h2>
+    <p>{{ plant.price | currency }}</p>
+    <p>{{ plant.description }}</p>
+  </div>
+  

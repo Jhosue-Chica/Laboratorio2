@@ -1,0 +1,18 @@
+.plant-detail {
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+}
+
+.plant-detail img {
+    width: 100%;
+    height: auto;
+}
+
+.plant-detail h2 {
+    margin: 8px 0;
+}
+
+.plant-detail p {
+    margin: 8px 0;
+}

@@ -1,1 +1,5 @@
-<p>plant-list works!</p>
+<div class="plant-list">
+    <app-plant-card *ngFor="let plant of plants" [plant]="plant" (viewDetails)="handleViewDetails(plant)"
+        (addToCart)="handleAddToCart(plant)">
+    </app-plant-card>
+</div>

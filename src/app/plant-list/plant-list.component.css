@@ -1,0 +1,9 @@
+.plant-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plant-list app-plant-card {
+    flex: 1 1 calc(33.333% - 16px);
+    margin: 8px;
+}
