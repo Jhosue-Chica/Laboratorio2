@@ -1,23 +1,26 @@
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Plant } from '../models/plant.model';
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-plant-card',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './plant-card.component.html',
-  styleUrl: './plant-card.component.css'
+  styleUrls: ['./plant-card.component.css']
 })
 export class PlantCardComponent {
-  @Input() plant: any;
-  @Output() viewDetails = new EventEmitter<void>();
-  @Output() addToCart = new EventEmitter<void>();
+  @Input() plant!: Plant;
+  @Output() viewDetails = new EventEmitter<Plant>();
+  @Output() addToCart = new EventEmitter<Plant>();
 
-  onViewDetails() {
-    this.viewDetails.emit();
+  constructor() { }
+
+  onDetails(): void {
+    this.viewDetails.emit(this.plant);
   }
 
-  onAddToCart() {
-    this.addToCart.emit();
+  onAddToCart(): void {
+    this.addToCart.emit(this.plant);
   }
 }

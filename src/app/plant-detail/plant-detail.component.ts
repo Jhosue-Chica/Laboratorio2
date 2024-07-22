@@ -1,13 +1,15 @@
-import { CommonModule } from '@angular/common';
+// src/app/plant-detail/plant-detail.component.ts
 import { Component, Input } from '@angular/core';
+import { Plant } from '../models/plant.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-plant-detail',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './plant-detail.component.html',
-  styleUrl: './plant-detail.component.css'
+  styleUrls: ['./plant-detail.component.css']
 })
 export class PlantDetailComponent {
-  @Input() plant: any;
+  @Input() plant!: Plant;
 }

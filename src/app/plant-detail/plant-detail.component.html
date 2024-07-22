@@ -1,7 +1,7 @@
-<div class="plant-detail" *ngIf="plant">
-    <img [src]="plant.image" alt="{{ plant.name }}">
-    <h2>{{ plant.name }}</h2>
-    <p>{{ plant.price | currency }}</p>
-    <p>{{ plant.description }}</p>
-  </div>
-  
+<!-- src/app/plant-detail/plant-detail.component.html -->
+<div *ngIf="plant" class="plant-detail">
+  <img [src]="plant.imageUrl" alt="{{ plant.name }}">
+  <h2>{{ plant.name }}</h2>
+  <p>{{ plant.description }}</p>
+  <p>{{ plant.price | currency }}</p>
+</div>

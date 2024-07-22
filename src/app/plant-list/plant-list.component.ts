@@ -1,31 +1,36 @@
-import { Component } from '@angular/core';
-import { PlantService } from '../services/plant.service';
+// plant-list.component.ts
+import { Component, OnInit } from '@angular/core';
+import { Plant } from '../models/plant.model';
 import { PlantCardComponent } from '../plant-card/plant-card.component';
+import { CommonModule } from '@angular/common';
+import { PlantDetailComponent } from '../plant-detail/plant-detail.component';
 
 @Component({
   selector: 'app-plant-list',
   standalone: true,
-  imports: [PlantCardComponent],
+  imports: [PlantCardComponent,PlantDetailComponent,CommonModule],
   templateUrl: './plant-list.component.html',
-  styleUrl: './plant-list.component.css'
+  styleUrls: ['./plant-list.component.css']
 })
-export class PlantListComponent {
-  plants: any[] = [];
+export class PlantListComponent implements OnInit {
+  plants: Plant[] = [
+    // Lista de plantas de ejemplo
+    { id: 1, name: 'Aloe Vera', price: 10, description: 'Planta medicinal', imageUrl: '../../aloe-vera.png' },
+    { id: 2, name: 'Cactus', price: 15, description: 'Planta resistente', imageUrl: '../../cactus.png' },
+    // ... otras plantas
+  ];
+  selectedPlant: Plant | null = null;
+  cart: Plant[] = [];
 
-  constructor(private plantService: PlantService) {}
+  constructor() { }
 
-  ngOnInit() {
-    this.plants = this.plantService.getPlants();
+  ngOnInit(): void {}
+
+  onViewDetails(plant: Plant): void {
+    this.selectedPlant = plant;
   }
 
-  handleViewDetails(plant: any) {
-    // Lógica para manejar la visualización de detalles
-    console.log('View Details:', plant);
+  onAddToCart(plant: Plant): void {
+    this.cart.push(plant);
   }
-
-  handleAddToCart(plant: any) {
-    // Lógica para manejar la adición al carrito
-    console.log('Add to Cart:', plant);
-  }
-
 }

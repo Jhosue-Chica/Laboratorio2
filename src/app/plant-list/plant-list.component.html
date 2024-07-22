@@ -1,5 +1,19 @@
-<div class="plant-list">
-    <app-plant-card *ngFor="let plant of plants" [plant]="plant" (viewDetails)="handleViewDetails(plant)"
-        (addToCart)="handleAddToCart(plant)">
-    </app-plant-card>
+<!-- src/app/plant-list/plant-list.component.html -->
+<div>
+    <div class="plant-list">
+        <app-plant-card *ngFor="let plant of plants" [plant]="plant" (viewDetails)="onViewDetails($event)"
+            (addToCart)="onAddToCart($event)">
+        </app-plant-card>
+    </div>
+
+    <div *ngIf="selectedPlant" class="plant-detail">
+        <app-plant-detail [plant]="selectedPlant">
+        </app-plant-detail>
+    </div>
+    <!--
+    <div class="shopping-cart">
+      <app-shopping-cart
+        [cart]="cart">
+      </app-shopping-cart>
+    </div>-->
 </div>
