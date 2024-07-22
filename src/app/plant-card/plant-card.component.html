@@ -1,1 +1,8 @@
-<p>Un componente que muestre una tarjeta con información básica de una planta (imagen, nombre, precio).</p>
+<div class="plant-card">
+    <img [src]="plant.image" alt="{{ plant.name }}">
+    <h3>{{ plant.name }}</h3>
+    <p>{{ plant.price | currency }}</p>
+    <button (click)="onViewDetails()">View Details</button>
+    <button (click)="onAddToCart()">Add to Cart</button>
+  </div>
+  

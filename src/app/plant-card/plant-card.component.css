@@ -1,0 +1,22 @@
+.plant-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+}
+
+.plant-card img {
+    width: 100%;
+    height: auto;
+}
+
+.plant-card h3 {
+    margin: 8px 0;
+}
+
+.plant-card p {
+    margin: 8px 0;
+}
+
+.plant-card button {
+    margin: 4px;
+}

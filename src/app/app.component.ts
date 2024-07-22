@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PlantCardComponent } from './plant-card/plant-card.component';
 import { PlantDetailComponent } from './plant-detail/plant-detail.component';
@@ -8,6 +8,11 @@ import { FooterComponent } from './footer/footer.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
 import { OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common'; 
+import { PlantListComponent } from './plant-list/plant-list.component';
+
+
 
 @Component({
   selector: 'app-root',
