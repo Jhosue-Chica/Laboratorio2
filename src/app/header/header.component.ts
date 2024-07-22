@@ -19,16 +19,18 @@ export class HeaderComponent {
 
   onMenuClick(sectionId: string): void {
     if (sectionId === 'inicio') {
-      // Cambia la ruta si estás usando enrutamiento
-      this.router.navigate([], { fragment: sectionId });
-      
-      // Encuentra el elemento y hace scroll
-      const element = document.getElementById('footer-section');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      this.scrollToSection('footer-section');
+    } else if (sectionId === 'servicios') {
+      this.scrollToSection('plant-card-section');
     } else {
       this.menuClick.emit(sectionId);
+    }
+  }
+
+  private scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

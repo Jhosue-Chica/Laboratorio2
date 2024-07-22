@@ -40,6 +40,11 @@ export class CarrouselComponent implements OnInit, OnDestroy {
   startAutoSlide(): void {
     this.slideSubscription = interval(this.autoSlideInterval).subscribe(() => this.nextImage());
   }
+  goToLink(): void {
+    console.log('Botón "Ir al enlace" presionado');
+    // Aquí puedes agregar la lógica que desees, por ejemplo, redirigir a una URL
+    window.location.href = 'https://www.facebook.com';
+  }
 }
 
 
