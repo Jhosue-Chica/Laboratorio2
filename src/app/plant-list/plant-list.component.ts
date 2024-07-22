@@ -4,6 +4,8 @@ import { Plant } from '../models/plant.model';
 import { PlantCardComponent } from '../plant-card/plant-card.component';
 import { CommonModule } from '@angular/common';
 import { PlantDetailComponent } from '../plant-detail/plant-detail.component';
+import { Modal} from 'bootstrap';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-plant-list',
@@ -33,6 +35,11 @@ export class PlantListComponent implements OnInit {
 
   onViewDetails(plant: Plant): void {
     this.selectedPlant = plant;
+    const modalElement = document.getElementById('plantDetailModal');
+    if (modalElement) {
+      const modal = new Modal(modalElement);
+      modal.show();
+    }
   }
 
   onAddToCart(plant: Plant): void {

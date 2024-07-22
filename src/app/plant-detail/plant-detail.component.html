@@ -1,7 +1,21 @@
 <!-- src/app/plant-detail/plant-detail.component.html -->
-<div *ngIf="plant" class="plant-detail">
-  <img [src]="plant.imageUrl" alt="{{ plant.name }}">
-  <h2>{{ plant.name }}</h2>
-  <p>{{ plant.description }}</p>
-  <p>{{ plant.price | currency }}</p>
+<div class="modal fade" id="plantDetailModal" tabindex="-1" role="dialog" aria-labelledby="plantDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="plantDetailModalLabel">{{ plant.name }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img [src]="plant.imageUrl" alt="{{ plant.name }}" class="img-fluid mb-3">
+        <p>{{ plant.description }}</p>
+        <p>{{ plant.price | currency }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

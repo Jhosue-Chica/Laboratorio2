@@ -1,8 +1,10 @@
 <!-- src/app/plant-card/plant-card.component.html -->
-<div class="plant-card">
-  <img [src]="plant.imageUrl" alt="{{ plant.name }}">
-  <h3>{{ plant.name }}</h3>
-  <p>{{ plant.price | currency }}</p>
-  <button (click)="onDetails()">Ver Detalles</button>
-  <button (click)="onAddToCart()">Agregar al Carrito</button>
+<div class="plant-card card">
+  <img [src]="plant.imageUrl" class="card-img-top" alt="{{ plant.name }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ plant.name }}</h5>
+    <p class="card-text">{{ plant.price | currency }}</p>
+    <button class="btn btn-primary" (click)="onDetails()">Ver Detalles</button>
+    <button class="btn btn-success" (click)="onAddToCart()">Agregar al Carrito</button>
+  </div>
 </div>

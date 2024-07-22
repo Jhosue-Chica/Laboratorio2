@@ -1,19 +1,30 @@
 <!-- src/app/plant-list/plant-list.component.html -->
-<div>
-    <div class="plant-list">
-        <app-plant-card *ngFor="let plant of plants" [plant]="plant" (viewDetails)="onViewDetails($event)"
-            (addToCart)="onAddToCart($event)">
-        </app-plant-card>
-    </div>
+<div class="row">
+  <div *ngFor="let plant of plants" class="col-md-4 mb-4">
+    <app-plant-card [plant]="plant" (viewDetails)="onViewDetails($event)" (addToCart)="onAddToCart($event)">
+    </app-plant-card>
+  </div>
+</div>
 
-    <div *ngIf="selectedPlant" class="plant-detail">
-        <app-plant-detail [plant]="selectedPlant">
-        </app-plant-detail>
+<!-- Modal para mostrar detalles de la planta -->
+<div class="modal fade" id="plantDetailModal" tabindex="-1" role="dialog" aria-labelledby="plantDetailModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="plantDetailModalLabel">{{ selectedPlant?.name }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img [src]="selectedPlant?.imageUrl" alt="{{ selectedPlant?.name }}" class="img-fluid mb-3">
+        <p>{{ selectedPlant?.description }}</p>
+        <p>{{ selectedPlant?.price | currency }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
-    <!--
-    <div class="shopping-cart">
-      <app-shopping-cart
-        [cart]="cart">
-      </app-shopping-cart>
-    </div>-->
+  </div>
 </div>

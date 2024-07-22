@@ -1,9 +1,24 @@
-.plant-list {
-    display: flex;
-    flex-wrap: wrap;
+/* src/app/plant-list/plant-list.component.css */
+.plant-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.2s;
 }
 
-.plant-list app-plant-card {
-    flex: 1 1 calc(33.333% - 16px);
-    margin: 8px;
+.plant-card:hover {
+    transform: scale(1.05);
+}
+
+.plant-detail {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.shopping-cart {
+    margin-top: 20px;
 }
