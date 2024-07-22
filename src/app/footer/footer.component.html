@@ -14,25 +14,31 @@
                 <ul>
                     <li><strong>Redes Sociales</strong></li>
                 </ul>
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook" (click)="onSocialMediaClick('Facebook')">
                     <img src="../../5.png" alt="Facebook">
-                </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                  </a>
+
+
+                  <a href="https://instagram.com" target="_blank" aria-label="Instagram" (click)="onSocialMediaClick('Instagram')">
                     <img src="../../4.png" alt="Instagram">
-                </a>
-                <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+                  </a>
+
+                  <a href="https://youtube.com" target="_blank" aria-label="YouTube" (click)="onSocialMediaClick('YouTube')">
                     <img src="../../3.png" alt="YouTube">
-                </a>
+                  </a>
             </div>
             <div class="social-media">
             </div>
-            <div class="contactos">
+
+            <div class="contactos" *ngIf="showContactInfo">
                 <ul>
-                    <li><strong>Contáctos</strong></li>
-                    <li>www.ecoespe.com</li>
-                    <li>+33 877 554 332</li>
+                  <li><strong>Contáctos</strong></li>
+                  <li>www.ecoespe.com</li>
+                  <li>+33 877 554 332</li>
                 </ul>
-            </div>
+              </div>
+              
             <div class="servicios">
                 <ul>
                     <li><strong>Servicios</strong></li>
