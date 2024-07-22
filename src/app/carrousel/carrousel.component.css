@@ -1,0 +1,55 @@
+.carrousel {
+  position: relative;
+  width: auto;
+  height: 505px;
+  margin: auto;
+  overflow: hidden;
+  
+}
+
+.carrousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+  
+}
+
+.carrousel img {
+  width: 100%;
+  display: block;
+  
+}
+.carrousel-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem; /* Ajusta el tamaño de la fuente según tus necesidades */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la visibilidad del texto */
+  padding: 10px;
+  border-radius: 5px; /* Opcional: para bordes redondeados */
+}
+
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button:first-of-type {
+  left: 0;
+}
+
+button:last-of-type {
+  right: 0;
+}
