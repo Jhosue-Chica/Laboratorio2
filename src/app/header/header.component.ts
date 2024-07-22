@@ -1,4 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,21 @@ export class HeaderComponent {
   @Input() menuItems: { label: string, sectionId: string }[] = [];
   @Output() menuClick = new EventEmitter<string>();
 
+  constructor(private router: Router) {}
+
+
   onMenuClick(sectionId: string): void {
-    this.menuClick.emit(sectionId);
+    if (sectionId === 'inicio') {
+      // Cambia la ruta si estás usando enrutamiento
+      this.router.navigate([], { fragment: sectionId });
+      
+      // Encuentra el elemento y hace scroll
+      const element = document.getElementById('footer-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      this.menuClick.emit(sectionId);
+    }
   }
 }
