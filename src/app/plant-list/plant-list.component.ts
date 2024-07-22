@@ -14,10 +14,15 @@ import { PlantDetailComponent } from '../plant-detail/plant-detail.component';
 })
 export class PlantListComponent implements OnInit {
   plants: Plant[] = [
-    // Lista de plantas de ejemplo
-    { id: 1, name: 'Aloe Vera', price: 10, description: 'Planta medicinal', imageUrl: '../../aloe-vera.png' },
-    { id: 2, name: 'Cactus', price: 15, description: 'Planta resistente', imageUrl: '../../cactus.png' },
-    // ... otras plantas
+    { id: 1, name: 'Aloe Vera', price: 10, description: 'Planta medicinal', imageUrl: '../../ej-aloe-vera.png' },
+    { id: 2, name: 'Cactus', price: 15, description: 'Planta resistente', imageUrl: '../../ej-cactus.png' },
+    { id: 3, name: 'Orquídea', price: 25, description: 'Flor exótica', imageUrl: '../../ej-orquidea.png' },
+    { id: 4, name: 'Bonsai', price: 40, description: 'Árbol miniatura', imageUrl: '../../ej-bonsai.png' },
+    { id: 5, name: 'Helecho', price: 12, description: 'Planta de sombra', imageUrl: '../../ej-helecho.png' },
+    { id: 6, name: 'Rosa', price: 20, description: 'Flor clásica', imageUrl: '../../ej-rosa.png' },
+    { id: 7, name: 'Lavanda', price: 18, description: 'Planta aromática', imageUrl: '../../ej-lavanda.png' },
+    { id: 8, name: 'Suculenta', price: 8, description: 'Planta de bajo mantenimiento', imageUrl: '../../ej-suculenta.png' },
+    { id: 10, name: 'Girasol', price: 5, description: 'Flor alegre', imageUrl: '../../ej-girasol.png' }
   ];
   selectedPlant: Plant | null = null;
   cart: Plant[] = [];
