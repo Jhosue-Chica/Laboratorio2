@@ -1,0 +1,21 @@
+<div class="card" *ngIf="cart.length === 0">
+  <div class="card-body">
+    <h5 class="card-title">El carrito está vacío</h5>
+  </div>
+</div>
+
+<div class="card" *ngIf="cart.length > 0">
+  <div class="card-body">
+    <h2 class="card-title">Carrito de Compras</h2>
+    <div class="d-flex flex-wrap">
+      <div class="card" *ngFor="let plant of cart" style="width: 20%; margin: 10px;">
+        <img [src]="plant.imageUrl" alt="Plant Image" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ plant.name }}</h5>
+          <p class="card-text">{{ plant.price | currency }}</p>
+        </div>
+      </div>
+    </div>
+    <h3 class="card-text">Total: {{ getTotalPrice() | currency }}</h3>
+  </div>
+</div>

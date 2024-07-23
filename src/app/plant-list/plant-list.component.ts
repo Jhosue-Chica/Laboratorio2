@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 import { PlantDetailComponent } from '../plant-detail/plant-detail.component';
 import { Modal} from 'bootstrap';
 import $ from 'jquery';
+import { ShoppingCartComponent } from '../shopping-cart/shopping-cart.component';
 
 @Component({
   selector: 'app-plant-list',
   standalone: true,
-  imports: [PlantCardComponent,PlantDetailComponent,CommonModule],
+  imports: [PlantCardComponent,PlantDetailComponent,CommonModule,ShoppingCartComponent],
   templateUrl: './plant-list.component.html',
   styleUrls: ['./plant-list.component.css']
 })
@@ -45,4 +46,5 @@ export class PlantListComponent implements OnInit {
   onAddToCart(plant: Plant): void {
     this.cart.push(plant);
   }
+  
 }
